@@ -1,1 +1,1 @@
-//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
+console.log('Info')
