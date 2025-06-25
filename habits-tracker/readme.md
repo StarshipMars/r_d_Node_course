@@ -4,8 +4,9 @@
 > Додаток складається з **Model → Service → Controller**.
 
 
-npm install                    # немає залежностей, але створює lock-файл
-npm run start:tracker          # node index.js
+* npm install                    # немає залежностей, але створює lock-файл
+
+* npm run start:tracker          # node index.js
 
 
 Команди для взаємодії з консолью:
