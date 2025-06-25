@@ -37,7 +37,7 @@ export async function commandParser(data){
     }
     else if(response === 'stats'){
       const info = await statsInfo();
-      writeResult(info);
+      writeResult('\n' + info);
     }
     else if(command.match(/delete -{2}id <[\w+,\s]{1,}>/g)){
       const id = splittedCommand.slice(2).join(' ').replace(/<|>/g, '');
@@ -50,7 +50,7 @@ export async function commandParser(data){
        const freq = splittedCommand[splittedCommand.length - 1].replace(/"|'/g, '').toLowerCase();
        const msg = await updateHabit(id, name[0].toUpperCase()+name.slice(1), freq);
        writeResult(msg);
+    }else{
+      writeResult('Most likely, the wrong command was entered. Use -help (- help) for more details.\n');
     }
-
-    return writeResult('Most likely, the wrong command was entered. Use -help (- help) for more details.');
 }
